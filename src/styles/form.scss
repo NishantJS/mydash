@@ -1,0 +1,105 @@
+@import "variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+
+  &__input {
+    color: $font_color;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: $space;
+
+    input {
+      margin-top: calc($space/2);
+      padding: $space;
+      border: 1px solid $border_color;
+      border-radius: 3px;
+
+      &:focus {
+        outline: 1px solid $font_color;
+      }
+    }
+
+    &--error {
+      font-size: smaller;
+    }
+
+    &__terms {
+      margin: calc($space * 2) 0 calc($space * 3) 0;
+
+      input {
+        appearance: none;
+        background-color: #fff;
+        font: inherit;
+        color: $accent;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid $accent;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: "";
+          width: 0.65em;
+          height: 0.65em;
+          transform: scale(0);
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em $accent;
+          transform-origin: bottom left;
+          clip-path: polygon(
+            14% 44%,
+            0 65%,
+            50% 100%,
+            100% 16%,
+            80% 0%,
+            43% 62%
+          );
+        }
+
+        &:checked::before {
+          transform: scale(1);
+        }
+      }
+
+      b {
+        margin-left: $space;
+      }
+
+      .error {
+        font-size: smaller;
+      }
+    }
+
+    &__phone {
+      max-width: 200px;
+    }
+
+    &__submit {
+      color: aliceblue;
+      padding: calc($space * 1.5) calc($space * 7);
+      width: fit-content;
+      border: none;
+      outline: none;
+      background-color: #00bbff;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: $accent;
+      }
+    }
+
+    // &--error {
+    //   input {
+    //     outline: 1px solid $danger;
+    //   }
+    // }
+  }
+}

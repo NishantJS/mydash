@@ -1,0 +1,23 @@
+{
+  "email": {
+    "placeholder": "Your email address",
+    "type": "email"
+  },
+
+  "password": {
+    "placeholder": "Your password",
+    "type": "password"
+  },
+  "confirm_password": {
+    "placeholder": "Confirm your password",
+    "type": "password"
+  },
+  "name": {
+    "placeholder": "Your full name",
+    "type": "text"
+  },
+  "phone": {
+    "placeholder": "Your phone number",
+    "type": "tel"
+  }
+}

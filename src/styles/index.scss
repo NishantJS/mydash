@@ -1,0 +1,23 @@
+@import "variables";
+
+body,
+section,
+div,
+form,
+input,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body_background_color;
+  font-family: $font;
+}
