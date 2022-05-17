@@ -1,6 +1,6 @@
 import React from "react";
-import Elements from "../data/formElements.json";
-import { onFocusOut, onInputChange } from "../services/action";
+import Elements from "../../data/formElements.json";
+import { onFocusOut, onInputChange } from "../../services/action";
 
 const FormElements = ({ formState, dispatch }) => {
   return Object.keys(Elements).map((element) => {

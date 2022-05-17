@@ -1,12 +1,14 @@
 import { useReducer } from "react";
-import { formsReducer, initialState } from "../services/reducer";
-import { onFocusOut, validateInput } from "../services/action";
-import "../styles/form.scss";
-import { UPDATE_FORM } from "../services/constant";
+import { useNavigate } from "react-router-dom";
+import { formsReducer, initialState } from "../../services/reducer";
+import { onFocusOut, validateInput } from "../../services/action";
+import { UPDATE_FORM } from "../../services/constant";
 import FormElements from "./FormElements";
+import "../../styles/form.scss";
 
 const Form = () => {
   const [formState, dispatch] = useReducer(formsReducer, initialState);
+  const navigate = useNavigate();
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -36,6 +38,8 @@ const Form = () => {
         });
       }
     }
+
+    if (isFormValid) navigate("/welcome", { state: { isAuthenticated: true } });
   };
 
   return (

@@ -1,0 +1,17 @@
+@import "variables";
+
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+
+  button {
+    background-color: $accent;
+    color: aliceblue;
+    border: 0;
+    padding: calc($space * 1.5) calc($space * 4);
+    margin-top: 10px;
+  }
+}
